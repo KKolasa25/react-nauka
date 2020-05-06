@@ -5,7 +5,7 @@ import Hero from '../Hero/Hero';
 class List extends React.Component {
   render() {
     return ( // nawiasy klamrowe pozwalaja pozwalają na wstawienie kodu JS wewnątrz kodu JSX
-      <section className = {styles.component}> 
+      <section className={styles.component}> 
         <Hero />
       </section>
     )
