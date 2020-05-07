@@ -1,14 +1,19 @@
 import React from 'react';
-import styles from './App.scss'; // podłączenie styli do komponentu App
+import styles from './App.scss';
 import List from '../List/List';
 
 class App extends React.Component {
   render() {
-    return ( // nawiasy klamrowe pozwalaja pozwalają na wstawienie kodu JS wewnątrz kodu JSX
+    return ( 
       <main className={styles.component}> 
-        <h1 className={styles.title}>My first React app</h1>
+        <h1 className={styles.title}>My first React app. Props</h1>
         <h2 className={styles.subtitle}>Hello World!</h2>
-        <List />
+        <List title={['Things to do ', <sup key='1'>soon!</sup>]}
+        srcImg="http://uploads.kodilla.com/bootcamp/fer/11.react/space.png" alt="space_background" // wpisany adres obrazka i alternatywy w APP
+        titleFirst={'Animals'}
+        titleSecond={'Minerals'} 
+        titleThird={'Plants'}>
+        </List>
       </main>
     )
   }
