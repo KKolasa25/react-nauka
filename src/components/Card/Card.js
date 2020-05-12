@@ -18,16 +18,3 @@ class Card extends React.Component{
 }
 
 export default Card;
-
-
-//class Creator extends React.Component {
-  //<section className={styles.component}> 
-    //<h3 className={styles.title}>{props.cardCreatorText}</h3>
-  //</section>
-//};
-
-//Card.propTypes = {
-  //cardCreatorText: PropTypes.string.isRequired,
-//};
-
-//export default Card;

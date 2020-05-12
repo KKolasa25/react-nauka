@@ -41,14 +41,16 @@ class Column extends React.Component {
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>
-          {this.props.title}
           <span className={styles.icon}>
             <Icon name={this.props.icon} />
+            {this.props.title}
           </span>
         </h3>
-        {this.state.cards.map(({ key, ...cardProps }) => (
-          <Card key={key} {...cardProps} />
-        ))}
+        <div>
+          {this.state.cards.map(({ key, ...cardProps }) => (
+            <Card key={key} {...cardProps} />
+          ))}
+        </div>
         <div className={styles.creator}>
           <Creator text={settings.cardCreatorText} action={title => this.addCard(title)} />
         </div>
@@ -56,5 +58,7 @@ class Column extends React.Component {
     )
   }
 }
+
+
 
 export default Column;
