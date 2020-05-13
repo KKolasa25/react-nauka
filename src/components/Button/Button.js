@@ -10,7 +10,7 @@ const Button = ({ variant = '', ...otherProps }) => (
 );
 
 Button.propTypes = {
-  variant: PropTypes.node,
+  variant: PropTypes.string, // zmiana z "node" na "string", ponieważ metode variant.split wykonujemy na ciągu znaków
 };
 
 export default Button;
