@@ -7,7 +7,33 @@ import { settings } from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 import Creator from '../Creator/Creator';
 
-class List extends React.Component {
+const List = props => (
+  <section className={styles.component}>
+    <Hero titleText={props.title} image={props.image} />
+    <div className={styles.description}>
+      {ReactHtmlParser(props.description)}
+    </div>
+    <div className={styles.columns}>
+      {props.columns.map(columnData => (
+        <Column key={columnData.id} {...columnData} />
+      ))}
+    </div>
+    <div className={styles.creator}>
+      <Creator text={settings.columnCreatorText} action={props.addColumn} />
+    </div>
+  </section>
+);
+
+List.propTypes = {
+  title: PropTypes.node.isRequired,
+  image: PropTypes.node.isRequired,
+  description: PropTypes.node,
+  columns: PropTypes.array,
+  addColumn: PropTypes.func,
+};
+export default List;
+
+/*class List extends React.Component {
 
   static propTypes = {
     title: PropTypes.node.isRequired,
@@ -41,4 +67,4 @@ class List extends React.Component {
     );
   }
 }
-export default List;
+export default List;*/

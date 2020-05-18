@@ -6,7 +6,34 @@ import Icon from '../Icon/Icon';
 import Creator from '../Creator/Creator';
 import Card from '../Card/Card';
 
-class Column extends React.Component {
+const Column = props => (
+  <section className={styles.component}>
+    <h3 className={styles.title}>
+      <span className={styles.icon}>
+        <Icon name={props.icon} />
+        {props.title}
+      </span>
+    </h3>
+    <div className={styles.cards}>
+      {props.cards.map(cardData => (
+        <Card key={cardData.id} {...cardData} />
+      ))}
+    </div>
+    <div className={styles.creator}>
+      <Creator text={settings.cardCreatorText} action={props.addCard} />
+    </div>
+  </section>
+);
+
+Column.propTypes = {
+  title: PropTypes.string.isRequired,
+  cards: PropTypes.array,
+  icon: PropTypes.string,
+  addCard: PropTypes.func,
+};
+export default Column;
+
+/*class Column extends React.Component {
 
   static propTypes = {
     title: PropTypes.string.isRequired,
@@ -42,4 +69,4 @@ class Column extends React.Component {
     );
   }
 }
-export default Column;
+export default Column;*/
