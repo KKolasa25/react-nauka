@@ -15,4 +15,5 @@ Hero.propTypes = {
   image: PropTypes.string, // zmiana z "node" na "string", ponieważ link to ciąg znaków (?)
 
 };
+
 export default Hero;

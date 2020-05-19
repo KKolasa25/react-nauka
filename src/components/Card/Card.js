@@ -11,6 +11,7 @@ const Card = props => (
 Card.propTypes = {
   title: PropTypes.string.isRequired,
 };
+
 export default Card;
 
 /*class Card extends React.Component {

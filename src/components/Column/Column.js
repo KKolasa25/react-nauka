@@ -31,6 +31,12 @@ Column.propTypes = {
   icon: PropTypes.string,
   addCard: PropTypes.func,
 };
+
+Column.defaultProps = {
+  description: settings.defaultColumnIcon,
+  icon: settings.defaultColumnIcon,
+};
+
 export default Column;
 
 /*class Column extends React.Component {
