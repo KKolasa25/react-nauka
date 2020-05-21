@@ -11,7 +11,7 @@ const Hero = props => (
 );
 
 Hero.propTypes = {
-  titleText: PropTypes.string.isRequired, // zmiana z "node" na "string", ponieważ jest ciąg znaków
+  titleText: PropTypes.string, // zmiana z "node" na "string", ponieważ jest ciąg znaków
   image: PropTypes.string, // zmiana z "node" na "string", ponieważ link to ciąg znaków (?)
 
 };
